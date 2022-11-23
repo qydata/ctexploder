@@ -50,7 +50,7 @@ defmodule Explorer.Chain.TokenTransfer do
   * `:amounts` - Tokens transferred amounts in case of batched transfer in ERC-1155
   * `:token_ids` - IDs of the tokens (applicable to ERC-1155 tokens)
   """
-  @type t :: % {
+  @type t :: %TokenTransfer{
           amount: Decimal.t() | nil,
           block_number: non_neg_integer() | nil,
           block_hash: Hash.Full.t(),
