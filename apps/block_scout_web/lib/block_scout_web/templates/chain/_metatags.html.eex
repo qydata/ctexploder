@@ -1,0 +1,5 @@
+<title>
+  <%= gettext("%{subnetwork} %{network} Explorer", subnetwork: LayoutView.subnetwork_title(), network: LayoutView.network_title()) %>
+</title>
+<meta name="description" content="<%= gettext "草田链是满足中国大陆境内法律法规，去币化去证券化的由社会各界机构与个人自由参与搭建的一条去中心化公链，具有公开透明强公信力，安全持续强流通等特点。助力中国元宇宙、链游与web3.0的落地应用与发展", subnetwork: LayoutView.subnetwork_title() %>">
+<meta name="keywords" content="元宇宙,web3,NFT,数字藏品平台,公链,无币公链,去币化去证券化公链,链游">
