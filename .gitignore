@@ -37,7 +37,7 @@ screenshots/
 # Sobelow
 .sobelow
 
-# osx 
+# osx
 .DS_Store
 
 # mix phx.gen.cert self-signed certs for dev
@@ -45,3 +45,11 @@ screenshots/
 
 /docker-compose/postgres-data
 /docker-compose/tmp
+.vscode
+.idea
+docker-compose-no-build-ctchain.yml
+docker.txt
+备注.txt
+部署步骤.txt
+Blockscout保留命令.txt
+
