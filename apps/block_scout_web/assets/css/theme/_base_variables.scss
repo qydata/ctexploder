@@ -217,7 +217,7 @@ $container-max-widths: (
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
   .container {
     max-width: 1300px !important;
   }
@@ -689,7 +689,8 @@ $nav-link-height: (
   $font-size-base * $line-height-base + $nav-link-padding-y * 2
 ) !default;
 $navbar-brand-height: $navbar-brand-font-size * $line-height-base !default;
-$navbar-brand-padding-y: math.div($nav-link-height - $navbar-brand-height, 2) !default;
+//$navbar-brand-padding-y: math.div($nav-link-height - $navbar-brand-height, 2) !default;
+//$navbar-brand-padding-y: math.div($nav-link-height - $navbar-brand-height, 2) !default;
 
 $navbar-toggler-padding-y: 0.25rem !default;
 $navbar-toggler-padding-x: 0.75rem !default;

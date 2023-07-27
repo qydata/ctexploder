@@ -8,7 +8,7 @@
              alt="<%= subnetwork_title() %>"/>
         <% end %>
         <%= if logo_text() do %>
-        <span class="logo-text <%= unless logo(), do: "no-logo" %>"> <%= logo_text() %> </span>
+        <a href='https://www.ttbz.org.cn/StandardManage/Detail/78114/' target='_blank' class="logo-text <%= unless logo(), do: "no-logo" %>"> <%= logo_text() %> </a>
         <% end %>
     <% end %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

@@ -10,7 +10,7 @@ $header-textfield-text-color: $header-links-color !default;
 $header-textfield-background-color: #f5f6fa !default;
 $header-textfield-magnifier-color: $header-links-color !default;
 $header-link-horizontal-padding: 0.71rem;
-$navbar-logo-height: 28px !default;
+$navbar-logo-height: 50px !default;
 $navbar-logo-width: auto !default;
 
 .navbar.navbar-primary {
@@ -23,7 +23,7 @@ $navbar-logo-width: auto !default;
   }
 
   .navbar-nav {
-    
+
     .nav-link {
       outline: none;
       align-items: center;
@@ -46,7 +46,7 @@ $navbar-logo-width: auto !default;
         transform: translateX(-50%);
         transition: $transition-cont;
         width: calc(
-          100% - #{$header-link-horizontal-padding} - #{$header-link-horizontal-padding}
+                100% - #{$header-link-horizontal-padding} - #{$header-link-horizontal-padding}
         );
       }
 
@@ -63,6 +63,7 @@ $navbar-logo-width: auto !default;
       &:hover,
       &.active-icon {
         color: $header-links-color-active;
+
         .nav-link-icon {
           path {
             fill: $header-icon-color-hover;
@@ -86,6 +87,7 @@ $navbar-logo-width: auto !default;
 
     .nav-item-networks {
       margin-left: auto;
+
       .nav-link:before {
         display: none;
       }
@@ -101,6 +103,7 @@ $navbar-logo-width: auto !default;
       background-image: url($header-toggler-icon);
     }
   }
+
   .search-form {
     display: flex;
 
@@ -132,20 +135,24 @@ $navbar-logo-width: auto !default;
     width: 100%;
     z-index: 1;
 
-    &[placeholder]{
+    &[placeholder] {
       text-overflow: ellipsis !important;
     }
+
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-        text-overflow: ellipsis  !important;
+      text-overflow: ellipsis !important;
     }
+
     &::-moz-placeholder { /* Firefox 19+ */
-        text-overflow: ellipsis  !important;
+      text-overflow: ellipsis !important;
     }
+
     &:-ms-input-placeholder { /* IE 10+ */
-        text-overflow: ellipsis  !important;
+      text-overflow: ellipsis !important;
     }
+
     &:-moz-placeholder { /* Firefox 18- */
-        text-overflow: ellipsis  !important;
+      text-overflow: ellipsis !important;
     }
 
     &:focus {
@@ -162,6 +169,7 @@ $navbar-logo-width: auto !default;
       width: 550px;
     }
   }
+
   .input-group-append {
     height: 38px;
     position: absolute;
@@ -190,6 +198,7 @@ $navbar-logo-width: auto !default;
       fill: $header-textfield-magnifier-color;
     }
   }
+
   .input-group-text {
     align-items: center;
     background: none;
@@ -224,18 +233,22 @@ $navbar-logo-width: auto !default;
     }
 
   }
+
   .input-group {
     width: 100%;
   }
+
   .navbar-nav {
     white-space: nowrap;
   }
 }
 
 .navbar-brand {
+  padding: 0;
   margin-left: 0;
   flex-shrink: 1;
   display: inline-flex;
+
   .navbar-logo {
     max-width: 100%;
   }
@@ -248,10 +261,12 @@ $navbar-logo-width: auto !default;
 
 .logo-text {
   color: #333;
-  font-size: 1rem;
-  font-weight: 700;
-  margin-left: 5px;
-  line-height: 28px;
+  font-size: 12px;
+  font-weight: 600;
+  //margin-left: 5px;
+  line-height: 30px;
+  align-self: self-end;
+  display: none;
 
   &.in-footer {
     color: #fff;
@@ -259,6 +274,12 @@ $navbar-logo-width: auto !default;
 
   &.no-logo {
     margin-left: 0px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .logo-text {
+    display: block;
   }
 }
 

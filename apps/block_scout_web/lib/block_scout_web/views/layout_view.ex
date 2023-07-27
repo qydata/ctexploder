@@ -37,7 +37,7 @@ defmodule BlockScoutWeb.LayoutView do
   alias BlockScoutWeb.SocialMedia
 
   def logo do
-    Keyword.get(application_config(), :logo) || "/images/blockchainbrowser.png"
+    Keyword.get(application_config(), :logo) || "/images/blockchainbrowser1.svg"
   end
 
   def logo_footer do
