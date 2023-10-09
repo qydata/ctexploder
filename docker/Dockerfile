@@ -16,10 +16,10 @@ RUN set -ex && \
     /usr/glibc-compat/sbin/ldconfig /lib /usr/glibc-compat/lib
 
 # Get Rust
-#RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-ENV RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
-ENV RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
-RUN curl --proto '=https' --tlsv1.2 -sSf https://cdn.jsdelivr.net/gh/rust-lang-nursery/rustup.rs/rustup-init.sh | sh -s -- -y
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+#ENV RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+#ENV RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+#RUN curl --proto '=https' --tlsv1.2 -sSf https://cdn.jsdelivr.net/gh/rust-lang-nursery/rustup.rs/rustup-init.sh | sh -s -- -y
 ENV PATH="$HOME/.cargo/bin:${PATH}"
 ENV HEX_MIRROR="https://hexpm.upyun.com"
 ENV HEX_CDN="https://hexpm.upyun.com"

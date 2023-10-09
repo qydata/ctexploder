@@ -53,6 +53,10 @@
         background: rgba(40, 167, 69, 0.2);
         color: rgb(40, 167, 69);
     }
+    &.error {
+        background: rgba(230, 110, 110, 0.2);
+        color: rgb(255, 0, 0);
+    }
 }
 
 .confirmations-label {

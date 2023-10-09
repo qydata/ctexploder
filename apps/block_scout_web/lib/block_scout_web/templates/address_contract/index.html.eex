@@ -23,7 +23,7 @@
               <div style="display: inline-block;">
                 <%= render BlockScoutWeb.CommonComponentsView, "_info.html" %>
                 <span> <%= gettext("Contract is not verified. However, we found a verified contract with the same bytecode in Blockscout DB") %> <%= link(
-                  metadata_for_verification.address_hash, 
+                  metadata_for_verification.address_hash,
                   to: address_contract_path(@conn, :index, metadata_for_verification.address_hash)) %>.<br/> <%= gettext("All metadata displayed below is from that contract. In order to verify current contract, click") %> <i><%= gettext("Verify & Publish") %></i> <%= gettext("button") %></span>
               </div>
               <%= link(gettext("Verify & Publish"), to: path, class: "button button-primary button-sm float-right ml-3", "data-test": "verify_and_publish") %>
@@ -156,18 +156,18 @@
                     <%= gettext "Copy Contract Creation Code" %>
                   </button>
                   <%= if match?({:selfdestructed, _}, contract_creation_code) do %>
-                    <div class="button button-disabled button-sm float-right ml-3">
+                    <!--       <div class="button button-disabled button-sm float-right ml-3">
                       <%= gettext("Verify & Publish") %>
-                    </div>
+                    </div>-->
                   <% else %>
                     <%= if !fully_verified do %>
                       <% path = address_verify_contract_path(@conn, :new, @address.hash) %>
-                      <%= link(
+                    <!--       <%= link(
                             gettext("Verify & Publish"),
                             to: path,
                             class: "button button-primary button-sm float-right ml-3",
                             "data-test": "verify_and_publish"
-                          ) %>
+                          ) %> -->
                     <% end %>
                   <% end %>
                 </div>
@@ -175,7 +175,7 @@
               <div class="tile tile-muted mb-4">
                 <pre class="pre-wrap pre-scrollable"><code class="nohighlight"><%= creation_code(@address) %></code></pre>
               </div>
-            <% end %>    
+            <% end %>
             <%= if fully_verified do %>
               <div class="d-flex justify-content-between align-items-baseline">
                 <h3><%= gettext "Deployed ByteCode" %></h3>
@@ -193,9 +193,9 @@
                     <%= gettext "Copy Deployed ByteCode" %>
                   </button>
                   <%= if match?({:selfdestructed, _}, contract_creation_code) and !creation_code(@address) do %>
-                    <div class="button button-disabled button-sm float-right ml-3">
+                <!--    <div class="button button-disabled button-sm float-right ml-3">
                       <%= gettext("Verify & Publish") %>
-                    </div>
+                    </div> -->
                   <% else %>
                     <%= if !fully_verified and !creation_code(@address) do %>
                       <% path = address_verify_contract_path(@conn, :new, @address.hash) %>

@@ -21,7 +21,7 @@
 
     <div class="row">
       <div class="col-xs-12 col-lg-3">
-        <p class="footer-info-text"><%= gettext("基于主流技术标准，去代币化、去证券化、去匿名化、去中心化的合规公链") %></p>
+        <!--  <p class="footer-info-text"><%= gettext("基于主流技术标准，去代币化、去证券化、去匿名化、去中心化的合规公链") %></p> -->
         <div class="footer-social-icons">
           <!-- <a href="https://github.com/blockscout/blockscout" rel="noreferrer" target="_blank" class="footer-social-icon" title='<%= gettext("Github") %>'>
             <div class="footer-social-icon-container fontawesome-icon github"></div>
@@ -94,7 +94,7 @@
         <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011702009002"  target="_blank" class="footer-link">沪公网安备 31011702009002号 </a>
         <%= gettext(" ICP备案：") %>
         <a href="https://beian.miit.gov.cn/"  target="_blank" class="footer-link">沪ICP备17029890号-4 </a>
-        <%= gettext(" 国家网信办区块链备案：沪网信备31011220342626230036号 共建合作：15900824215（微信同）") %>
+        <%= gettext(" 共建合作：15900824215（微信同）") %>
       </div>
     <% end %>
   </div>

@@ -191,10 +191,11 @@ defmodule BlockScoutWeb.AddressView do
   end
 
   def address_auth(%Address{hash: hash}) do
-#     url = "https://api.ctblock.cn/api/address/address_auth"
+     url = "https://api.ctblock.cn/api/address/address_auth"
 #    url = "http://localhost:8000/api/address/address_auth"
-    url = "http://172.16.169.161:8001/api/address/address_auth"
-    args = %{:address => to_string(hash)}
+#    url = "http://172.16.169.161:8001/api/address/address_auth"
+#    args = %{:address => to_string(hash)}
+    args = %{:address => "0x21366DB44c5C6Aebe8fE6005B3F599E561100740"}
     body = Poison.encode! args
 
     headers = [{"Content-type", "application/json"}]
@@ -212,8 +213,15 @@ defmodule BlockScoutWeb.AddressView do
         {:ok, req} = Poison.decode(body)
         if req["code"] == 200 do
           if req["result"]["isAuth"] == true do
-            to_string(req["result"]["parthAddr"])
+            if req["result"]["isNotExpired"] == true do
+              statusDesc = '<div class="bs-label success">正常</div>'
+              "<div>#{to_string(req["result"]["parthAddr"])}</div>#{statusDesc}"
+            else
+              statusDesc = '<div class="bs-label error">已过期</div>'
+              "<div>#{to_string(req["result"]["parthAddr"])}</div>#{statusDesc}"
+            end
           else
+#           <div class="page-link bs-label large btn-no-border-link-to-tems"></div>
             to_string("未认证")
           end
         else
