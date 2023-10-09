@@ -191,11 +191,11 @@ defmodule BlockScoutWeb.AddressView do
   end
 
   def address_auth(%Address{hash: hash}) do
-     url = "https://api.ctblock.cn/api/address/address_auth"
+#     url = "https://api.ctblock.cn/api/address/address_auth"
 #    url = "http://localhost:8000/api/address/address_auth"
-#    url = "http://172.16.169.161:8001/api/address/address_auth"
-#    args = %{:address => to_string(hash)}
-    args = %{:address => "0x21366DB44c5C6Aebe8fE6005B3F599E561100740"}
+    url = "http://172.16.169.161:8001/api/address/address_auth"
+    args = %{:address => to_string(hash)}
+#    args = %{:address => "0x21366DB44c5C6Aebe8fE6005B3F599E561100740"}
     body = Poison.encode! args
 
     headers = [{"Content-type", "application/json"}]
